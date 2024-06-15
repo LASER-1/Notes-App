@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".fragments.LoginFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_notes_app"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/light_purple"
+        android:fontFamily="@font/montserrat_alternates"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:contentDescription="@string/app_logo"
+        android:src="@drawable/app_logo_image"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/googleSignInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/google_sign_in"
+        android:drawableStart="@drawable/google_icon"
+        android:padding="6dp"
+        android:background="@drawable/background_button"/>
+
+
+</LinearLayout>

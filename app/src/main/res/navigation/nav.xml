@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@+id/loginFragment">
+
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.example.notes.fragments.LoginFragment"
+            android:label="LoginFragment" >
+            <action
+                android:id="@+id/action_loginFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/loginFragment"
+                app:popUpToInclusive="true"/>
+        </fragment>
+
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.example.notes.fragments.HomeFragment"
+            android:label="HomeFragment" >
+            <action
+                android:id="@+id/action_homeFragment_to_addNoteFragment"
+                app:destination="@id/addNoteFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_loginFragment"
+                app:destination="@id/loginFragment"
+                app:popUpTo="@id/homeFragment"
+                app:popUpToInclusive="true"/>
+            <action
+                android:id="@+id/action_homeFragment_to_updateNoteFragment"
+                app:destination="@id/updateNoteFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/addNoteFragment"
+            android:name="com.example.notes.fragments.AddNoteFragment"
+            android:label="AddNoteFragment" />
+    <fragment
+        android:id="@+id/updateNoteFragment"
+        android:name="com.example.notes.fragments.UpdateNoteFragment"
+        android:label="fragment_update_note"
+        tools:layout="@layout/fragment_update_note">
+        <argument
+            android:name = "noteId"
+            app:argType ="integer"/>
+    </fragment>
+</navigation>
