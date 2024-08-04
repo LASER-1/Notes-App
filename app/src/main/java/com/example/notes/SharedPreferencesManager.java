@@ -26,7 +26,7 @@ public class SharedPreferencesManager {
         sharedPreferences.edit().putString(key, value).apply();
     }
     public void clearSharedPreference(){
-        sharedPreferences.edit().clear().apply();;
+        sharedPreferences.edit().clear().apply();
     }
 
 }
