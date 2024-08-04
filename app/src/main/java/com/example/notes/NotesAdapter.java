@@ -58,6 +58,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
                 Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_updateNoteFragment,bundle);
             }
         });
+        // Solved the delete node problem
         holder.deleteNote.setOnClickListener(view -> {
             NoteDbHelper dbHelper = DatabaseManager.getInstance(context).getNoteDbHelper();
             dbHelper.deleteNote(note.getId());

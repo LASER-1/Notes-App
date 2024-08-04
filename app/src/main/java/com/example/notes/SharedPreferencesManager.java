@@ -2,6 +2,7 @@ package com.example.notes;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+// Manages shared preferences for the app.
 
 public class SharedPreferencesManager {
     private static SharedPreferencesManager instance;
